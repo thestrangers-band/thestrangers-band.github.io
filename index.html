@@ -1,44 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Strangers Band</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom right, #1e3c72, #2a5298);
-            color: #fff;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 0.5em;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        a {
-            color: #ffdd57;
-            text-decoration: none;
-            margin-top: 1em;
-            display: inline-block;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Strangers Band</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      color: #fff;
+      background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+      scroll-behavior: smooth;
+    }
+    header, section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      max-width: 600px;
+      margin: 0 auto 20px auto;
+      line-height: 1.5;
+    }
+    a {
+      color: #ffdd57;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+    }
+    nav a:hover {
+      color: #ffdd57;
+    }
+    /* Section styles */
+    #hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #music a {
+      display: block;
+      margin: 10px 0;
+    }
+    #contact a {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    footer {
+      padding: 20px;
+      background: rgba(0,0,0,0.8);
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to The Strangers Band</h1>
-    <p>Our music, our story, our passion.</p>
-    <a href="#listen">Listen to our tracks</a>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#music">Music</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero / Welcome Section -->
+  <header id="hero">
+    <h1>The Strangers Band</h1>
+    <p>Our music, our story, our passion. Welcome to our official page!</p>
+    <a href="#music">Listen Now</a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About the Band</h2>
+    <p>
+      The Strangers Band brings a unique mix of melodies and rhythms that captivate audiences worldwide.
+      Founded in 2024, we are passionate about creating music that connects people.
+    </p>
+  </section>
+
+  <!-- Music Section -->
+  <section id="music">
+    <h2>Music</h2>
+    <p>Check out some of our tracks below:</p>
+    <a href="https://open.spotify.com/track/example" target="_blank">Track 1</a>
+    <a href="https://open.spotify.com/track/example" target="_blank">Track 2</a>
+    <a href="https://open.spotify.com/track/example" target="_blank">Track 3</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact & Socials</h2>
+    <p>Follow us or get in touch:</p>
+    <a href="https://instagram.com/thestrangers.band" target="_blank">Instagram</a>
+    <a href="mailto:info.thestrangersband@gmail.com">Email Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 The Strangers Band. All rights reserved.
+  </footer>
+
 </body>
 </html>
