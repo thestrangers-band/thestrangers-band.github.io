@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - The Strangers</title>
+    <link rel="icon" href="img/minilogo_2.jpg" type="image/png">
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -68,7 +69,6 @@
 
   <!-- Footer -->
 <footer>
- <footer>
   <div class="footer-left">
     <a href="https://www.instagram.com/thestrangers.ig" target="_blank" class="social-link">
       <img src="img/Instagram_icon.png" alt="Instagram" class="social-icon">
@@ -80,6 +80,21 @@
         <img src="img/minilogo_2.jpg" alt="The Strangers Band Logo" class="footer-logo">
   </div>
 </footer>
+
+  <!-- JS for mobile tap effect -->
+  <script>
+    const containers = document.querySelectorAll('.image-container');
+
+    containers.forEach(container => {
+      container.addEventListener('click', () => {
+        const img = container.querySelector('.section-img');
+        const overlay = container.querySelector('.overlay-text');
+
+        img.classList.toggle('hovered');
+        overlay.classList.toggle('visible');
+      });
+    });
+  </script>
 
 </body>
 </html>

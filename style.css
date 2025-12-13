@@ -106,10 +106,9 @@ button:hover, .cta:hover {
 
 /* Footer */
 footer {
-    position: relative;               /* allow absolute positioning for center */
     display: flex;
-    justify-content: space-between;
-    align-items: center;              /* vertically centers all children */
+    justify-content: space-between; /* left and right items */
+    align-items: center;            /* vertically center everything */
     background: rgba(0,0,0,0.9);
     border-top: 1px solid #ffdd57;
     padding: 20px 30px;
@@ -117,7 +116,7 @@ footer {
     flex-wrap: wrap;
 }
 
-/* Left */
+/* Left: Instagram + name */
 .footer-left {
     display: flex;
     align-items: center;
@@ -134,23 +133,14 @@ footer {
     transform: scale(1.2);
 }
 
-/* Center logo */
-.footer-center {
-    position: absolute;      /* position it exactly in the middle */
-    left: 50%;               /* horizontal center of footer */
-    transform: translateX(-50%); /* shift back by 50% of its own width */
-    display: flex;
-    align-items: center;
-}
-.footer-right img {
-    max-height: 40px;
-}
-
-/* Right text */
+/* Right: Mini logo */
 .footer-right {
     display: flex;
     align-items: center;     /* vertically center */
-    font-size: 0.9em;
+}
+
+.footer-right img {
+    max-height: 40px;
 }
 
 .fade-in {
@@ -163,29 +153,31 @@ footer {
     to   { opacity: 1; }
 }
 
-
 .image-container {
     position: relative;
     display: inline-block;
-    overflow: hidden; /* ensures no overflow if image scales */
+    overflow: hidden;
 }
-
 .section-img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 12px;
-    transition: opacity 0.3s ease, transform 0.3s ease; /* smooth effect */
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Overlay text */
+.section-img.hovered {
+    opacity: 0.6;
+    transform: scale(1.02);
+}
+
 .overlay-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffdd57;
-    font-size: 1em;
+    font-size: 2em;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(0,0,0,0.7);
     opacity: 0;
@@ -193,12 +185,15 @@ footer {
     pointer-events: none;
 }
 
-/* Hover effect */
+.overlay-text.visible {
+    opacity: 1;
+}
+/* Hover effect for desktop */
 .image-container:hover .overlay-text {
     opacity: 1;
 }
 
 .image-container:hover .section-img {
-    opacity: 0.6;        /* make image semi-transparent */
-    transform: scale(1.02); /* optional slight zoom for a “pop” effect */
+    opacity: 0.6;
+    transform: scale(1.02);
 }
