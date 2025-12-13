@@ -3,76 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Strangers Band</title>
+  <title>The Strangers </title>
+  
   <style>
-    /* General styles */
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      color: #fff;
-      background: linear-gradient(to bottom right, #1e3c72, #2a5298);
-      scroll-behavior: smooth;
-    }
-    header, section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    h1, h2 {
-      margin-bottom: 20px;
-    }
-    p {
-      max-width: 600px;
-      margin: 0 auto 20px auto;
-      line-height: 1.5;
-    }
-    a {
-      color: #ffdd57;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0,0,0,0.6);
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      z-index: 1000;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #fff;
-    }
-    nav a:hover {
-      color: #ffdd57;
-    }
-    /* Section styles */
-    #hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    #music a {
-      display: block;
-      margin: 10px 0;
-    }
-    #contact a {
-      display: inline-block;
-      margin: 0 10px;
-    }
-    footer {
-      padding: 20px;
-      background: rgba(0,0,0,0.8);
-      font-size: 0.9em;
-    }
-  </style>
+/* General Styles */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    color: #e0e0e0;
+    background: linear-gradient(135deg, #0f0f0f, #1c1c2a);
+    scroll-behavior: smooth;
+}
+
+/* Headings */
+h1, h2 {
+    color: #ffdd57; /* accent color */
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+    margin: 0 0 20px 0; /* top 0, bottom 20px */
+    padding: 0 20px;    /* left and right padding */
+    line-height: 1.5;
+}
+
+
+/* Links */
+a {
+    color: #ffdd57;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+a:hover {
+    color: #ffd633;
+    text-shadow: 0 0 8px #ffd633;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(20,20,30,0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    z-index: 1000;
+}
+nav a {
+    margin: 0 15px;
+    color: #fff;
+}
+nav a:hover {
+    color: #ffdd57;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+#hero img.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Section Panels */
+section {
+    background: rgba(30,30,40,0.85);
+    margin: 20px auto;
+    border-radius: 12px;
+    padding: 20px 20px;
+    max-width: 1000px;
+}
+
+/* Music & Contact Links */
+#music a {
+    display: block;
+    margin: 10px 0;
+}
+#contact a {
+    display: block;
+    margin: 10px 0;
+}
+
+/* Buttons / Call to Action */
+button, .cta, a.cta {
+    display: inline-block;
+    background: #ffdd57;
+    color: #111;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+button:hover, .cta:hover {
+    background: #ffd633;
+    box-shadow: 0 0 10px #ffd633;
+}
+
+/* Footer */
+footer {
+    background: rgba(15,15,20,0.9);
+    border-top: 1px solid #ffdd57;
+    padding: 20px;
+    text-align: center;
+    color: #ccc;
+    width: 100%;
+}
+</style>
+
+
 </head>
 <body>
 
@@ -85,18 +135,30 @@
   </nav>
 
   <!-- Hero / Welcome Section -->
-  <header id="hero">
+<header id="hero">
+    <!-- Logo -->
+    <img src="img/logo_bianco.png" alt="The Strangers Band Logo" style="max-width:500px; margin-bottom:20px;">
+
     <h1>The Strangers Band</h1>
     <p>Our music, our story, our passion. Welcome to our official page!</p>
     <a href="#music">Listen Now</a>
-  </header>
+</header>
 
   <!-- About Section -->
   <section id="about">
     <h2>About the Band</h2>
     <p>
-      The Strangers Band brings a unique mix of melodies and rhythms that captivate audiences worldwide.
-      Founded in 2024, we are passionate about creating music that connects people.
+      Siamo una band nata nel luglio 2021 dall'incontro quasi casuale di un
+      gruppo di ragazzi appassionati di musica. Partiti da sconosciuti,
+      abbiamo trasformato quell'incontro in un'avventura musicale e in
+      un'amicizia che abbiamo portato sia sul palco che fuori in Trentino,
+      Emilia Romagna e Lombardia.
+      La nostra formazione è composta da 16 elementi, in cui spicca una
+      sezione fiati che non passa inosservata. Il nostro repertorio rispecchia
+      in modo poliedrico tutti i rappresentanti della band, spaziando dal rock
+      'n' roll ai successi pop del momento, rock classico, funk fino alla
+      disco. Ogni canzone è curata con arrangiamenti originali e ogni serata
+      è pensata per far ballare e divertire persone di ogni età.
     </p>
   </section>
 
@@ -108,7 +170,6 @@
     <a href="https://open.spotify.com/track/example" target="_blank">Track 2</a>
     <a href="https://open.spotify.com/track/example" target="_blank">Track 3</a>
     <section id="music">
-  <h2>Music</h2>
   <p>Check out our latest video:</p>
 
   <div style="
@@ -120,7 +181,10 @@
     margin: 0 auto 30px auto;
     border-radius: 12px;
   ">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LzkaQ50aDGA?si=owbru2yJXPK1Ibi-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/LzkaQ50aDGA?si=owbru2yJXPK1Ibi-" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe>
   </div>
 
   <p>More tracks coming soon!</p>
