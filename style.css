@@ -197,3 +197,82 @@ footer {
     opacity: 0.6;
     transform: scale(1.02);
 }
+
+/* Overlay text container */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffdd57;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Show overlay on hover */
+.image-container:hover .overlay-text {
+    opacity: 1;
+}
+
+/* 2x2 grid */
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns of equal width */
+    grid-gap: 10%;                        /* space between cells */
+}
+
+/* Optional: style paragraphs inside grid */
+.grid-2x2 p {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;           /* space between buttons */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Instagram style */
+.social-btn.instagram {
+    background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    color: #000;
+}
+
+/* YouTube style */
+.social-btn.youtube {
+    background: linear-gradient(135deg,  #a80101, #FF3333, #FF0000);
+    color: #fff;
+}
+
+/* Button icons */
+.social-btn-icon {
+    width: 24px;
+    height: 24px;
+}
