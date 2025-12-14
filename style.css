@@ -70,6 +70,8 @@ nav a:hover {
     height: auto;       /* maintain aspect ratio */
     display: block;     /* remove inline spacing/margin issues */
     margin-bottom: 1em; /* optional spacing below */
+    /*margin-top: 1em; /* optional spacing below */
+
 }
 
 
@@ -284,4 +286,115 @@ footer {
 .social-btn-icon {
     width: 24px;
     height: 24px;
+}
+
+/* Events section */
+.events-section {
+    padding: 40px 5vw;
+    text-align: center;
+}
+
+/* Grid layout */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Posters */
+.events-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect */
+.events-grid img:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+
+
+
+/* Event card */
+.event-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Poster image */
+.event-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect */
+.event-card img:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+/* Caption text */
+.event-caption {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: #ccc;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Title inside caption */
+.event-caption strong {
+    color: #ffdd57;
+    font-size: 1em;
+}
+
+
+
+
+/* Page header */
+.page-header {
+    position: relative;
+    width: 100%;
+    height: 40vh;              /* controls header height */
+    min-height: 220px;
+    max-height: 420px;
+    overflow: hidden;
+}
+
+/* Header image */
+.page-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* crop nicely */
+    object-position: center;   /* focus center */
+    display: block;
+}
+
+/* Dark overlay for readability */
+.header-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header title */
+.header-overlay h1 {
+    color: #ffdd57;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-shadow: 0 0 15px rgba(0,0,0,0.8);
+    margin: 0;
 }
