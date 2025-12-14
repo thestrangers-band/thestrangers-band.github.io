@@ -65,9 +65,13 @@ nav a:hover {
     padding: 0 20px;
 }
 #hero img.logo {
-    max-width: 150px;
-    margin-bottom: 20px;
+    width: 100%;        /* fill the width of its container */
+    max-width: 100vw;   /* optional: never exceed viewport width */
+    height: auto;       /* maintain aspect ratio */
+    display: block;     /* remove inline spacing/margin issues */
+    margin-bottom: 1em; /* optional spacing below */
 }
+
 
 /* Section Panels */
 section {
@@ -177,12 +181,13 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffdd57;
-    font-size: 2em;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(0,0,0,0.7);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
+    text-align: center;
+    font-size: 4vw; /* font scales with viewport width */
 }
 
 .overlay-text.visible {
@@ -236,7 +241,7 @@ footer {
 .social-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;           /* space between buttons */
+    gap: 1em;                /* spacing scales with font size */
     justify-content: center;
     margin-top: 20px;
 }
@@ -244,14 +249,18 @@ footer {
 .social-btn {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 20px;
+    gap: 0.5em;              /* space between icon and text */
+    padding: 0.6em 1em;      /* relative padding, smaller on mobile */
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1em;
+    max-width: 280px;        /* cap the button width */
+    width: 100%;             /* allow it to scale on small screens */
+    box-sizing: border-box;
     color: #fff;
     transition: transform 0.2s, box-shadow 0.2s;
+    flex: 0 1 auto;          /* prevent flex stretching */
 }
 
 .social-btn:hover {
@@ -262,12 +271,12 @@ footer {
 /* Instagram style */
 .social-btn.instagram {
     background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-    color: #000;
+    color: #fff; /* make text white so it contrasts better on multicolor gradient */
 }
 
 /* YouTube style */
 .social-btn.youtube {
-    background: linear-gradient(135deg,  #a80101, #FF3333, #FF0000);
+    background: linear-gradient(135deg, #a80101, #FF3333, #FF0000);
     color: #fff;
 }
 
