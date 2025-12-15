@@ -468,3 +468,59 @@ footer {
 .slider-btn:hover {
     background: rgba(0,0,0,0.8);
 }
+
+
+
+/* Image slider */
+.image-slider {
+    position: relative;
+    max-width: 900px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+/* Track */
+.img-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+/* Images */
+.img-track img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    height: 420px;
+}
+
+/* Arrows */
+.img-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #ffdd57;
+    border: none;
+    font-size: 2rem;
+    padding: 5px 12px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 6px;
+}
+
+.img-btn.prev { left: 10px; }
+.img-btn.next { right: 10px; }
+
+.img-btn:hover {
+    background: rgba(0,0,0,0.85);
+}
+
+/* CTA link */
+.cta-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ffdd57;
+    font-weight: bold;
+    text-decoration: none;
+}
