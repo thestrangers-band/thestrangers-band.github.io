@@ -20,39 +20,44 @@
 
 
   <header class="page-header">
-  <img src="img/music.jpg" alt="The Strangers live">
+  <img src="img/music.JPEG" alt="The Strangers live">
   <div class="header-overlay">
-    <h1>Music</h1>
   </div>
 </header>
 
-  <!-- Music Section -->
-  <section id="music">
-    <h1>Music</h1>
-    <p>Check out some of our tracks below:</p>
-    <a href="https://open.spotify.com/track/example" target="_blank">Track 1</a>
-    <a href="https://open.spotify.com/track/example" target="_blank">Track 2</a>
-    <a href="https://open.spotify.com/track/example" target="_blank">Track 3</a>
+<section id="music">
 
-  <p>Check out our latest video:</p>
+  <div class="video-slider">
+    <button class="slider-btn prev">&#10094;</button>
 
-  <div style="
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    margin: 0 auto 30px auto;
-    border-radius: 12px;
-  ">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/LzkaQ50aDGA?si=owbru2yJXPK1Ibi-" 
-    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-  </iframe>
+    <div class="video-track">
+      <!-- Video 1 -->
+      <div class="video-item">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LzkaQ50aDGA?si=qEhzPwb_7ooEwRYi" title="YouTube video player" frameborder="0"
+ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-item">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/B8LKgqO5Wog?si=3ckU7nwhw6jweAoj" title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="video-item">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WJc_ofybJn0?si=h4MjwVzG031kuA73" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <button class="slider-btn next">&#10095;</button>
   </div>
 
-  <p>More tracks coming soon!</p>
-  </section>
+  <p>More tracks coming soon on <a href="https://www.youtube.com/@TheStrangers-ri2js" target="_blank"> Youtube </a>!</p>
+</section>
 
 
   <!--
@@ -213,9 +218,35 @@
   </div>
 </footer>
 
+
+<script>
+  const track = document.querySelector('.video-track');
+  const videos = document.querySelectorAll('.video-item');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+
+  let index = 0;
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % videos.length;
+    updateSlider();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + videos.length) % videos.length;
+    updateSlider();
+  });
+
+  setInterval(() => {
+  index = (index + 1) % videos.length;
+  updateSlider();
+}, 6000);
+
+</script>
+
 </body>
 </html>
-
-
-
-<!--https://take.quiz-maker.com/Q72YJXMJS-->
