@@ -21,15 +21,17 @@
   </nav>
 
 <header class="page-header">
+
   <img src="img/about_us.jpg" alt="The Strangers live">
   <div class="header-overlay">
+    <h1> About Us</h1>
   </div>
 </header>
 
 
   <!-- About Section -->
   <section>
-    <h1>About Us</h1>
+
 
     <p>
       Siamo una band nata nel luglio 2021 dall'incontro quasi casuale di un gruppo di ragazzi appassionati di musica. Partiti da sconosciuti, 
@@ -101,18 +103,29 @@
     </div>
   </section>
 
-<section>
-  <h2>More</h2>
+<section class="more-section">
+  <div class="more-container">
+    <!-- Left: Links -->
+    <div class="more-links">
+      <h1>More</h1>
+      <a href="img/quotidiano_meeting.pdf" target="_blank" class="external-link">
+        📄 <i>Quotidiano Meeting</i> (PDF)
+      </a>
 
-  <a href="img/quotidiano_meeting.pdf" target="_blank" class="external-link">
-    📄 <i>Quotidiano Meeting</i> (PDF)
-  </a>
+      <a href="https://take.quiz-maker.com/Q72YJXMJS" target="_blank" class="external-link">
+        🌍 Scopri che Strangers sei
+      </a>
+    </div>
 
-  <br>
-
-  <a href="https://take.quiz-maker.com/Q72YJXMJS" target="_blank" class="external-link">
-    🌍 Scopri che Strangers sei
-  </a>
+    <!-- Right: Spotify player -->
+    <div class="spotify-player">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/36lVTS8HNrhqiaRGkqh2bL?utm_source=generator" 
+        width="100%" height="352" frameBorder="0" allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+      </iframe>
+    </div>
+  </div>
 </section>
 
 
@@ -139,12 +152,19 @@ document.querySelectorAll('.image-container').forEach(container => {
   container.addEventListener('click', () => {
     const isOpen = overlay.classList.contains('visible');
 
-    // Close all others first (so only one is open)
-    document.querySelectorAll('.overlay-text.visible').forEach(o => o.classList.remove('visible'));
-    document.querySelectorAll('.section-img.hovered').forEach(i => i.classList.remove('hovered'));
+    // Close all others first
+    document.querySelectorAll('.overlay-text.visible').forEach(o => {
+      if (o !== overlay) o.classList.remove('visible');
+    });
+    document.querySelectorAll('.section-img.hovered').forEach(i => {
+      if (i !== img) i.classList.remove('hovered');
+    });
 
-    // Toggle this one
-    if (!isOpen) {
+    // Toggle this one: if it was open, close it; if closed, open it
+    if (isOpen) {
+      overlay.classList.remove('visible');
+      img.classList.remove('hovered');
+    } else {
       overlay.classList.add('visible');
       img.classList.add('hovered');
     }

@@ -26,13 +26,13 @@ p {
 
 /* Links */
 a {
-    color: #ffdd57;
+    color: #ffdd57;*/;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s, text-shadow 0.3s;
 }
 a:hover {
-    color: #ffd633;
+    color:  #ffdd57; /* #ffdd57;*/
     text-shadow: 0 0 8px #ffd633;
 }
 
@@ -67,7 +67,7 @@ nav a:hover {
     padding: 0 20px;
 }
 #hero img.logo {
-    width: 100%;        /* fill the width of its container */
+    width: 90%;        /* fill the width of its container */
     max-width: 100vw;   /* optional: never exceed viewport width */
     height: auto;       /* maintain aspect ratio */
     display: block;     /* remove inline spacing/margin issues */
@@ -209,6 +209,12 @@ footer {
     text-align: center;
     font-size: clamp(0.9rem, 2.5vw, 1.4rem);
     line-height: 1.4;
+}
+
+.overlay-text p {
+    white-space: nowrap;       /* keep text on one line */
+    overflow: hidden;          /* prevent overflow from breaking layout */
+    text-overflow: ellipsis;   /* optional: show "..." if too long */
 }
 
 .overlay-text.visible {
@@ -364,28 +370,52 @@ footer {
 }
 
 
+/*
 
 
-/* Page header */
 .page-header {
     position: relative;
     width: 100%;
-    height: 30vh;              /* controls header height */
+    height: 30vh;              
     min-height: 220px;
     max-height: 420px;
     overflow: hidden;
 }
 
-/* Header image */
+
 .page-header img {
     width: 100%;
     height: 100%;
-    object-fit: cover;         /* crop nicely */
-    object-position: center;   /* focus center */
+    object-fit: cover;         
+    object-position: center;   
+    display: block;
+}
+*/
+
+.page-header {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    min-height: 220px;
+    max-height: 420px;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .page-header {
+        height: 30vh;
+        max-height: 600px;
+    }
+}
+
+.page-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;;  /*   better crop for desktop */
     display: block;
 }
 
-/* Dark overlay for readability */
 .header-overlay {
     position: absolute;
     inset: 0;
@@ -395,14 +425,12 @@ footer {
     justify-content: center;
 }
 
-/* Header title */
 .header-overlay h1 {
     color: #ffdd57;
     font-size: clamp(2rem, 5vw, 3.5rem);
     text-shadow: 0 0 15px rgba(0,0,0,0.8);
     margin: 0;
 }
-
 
 .external-link {
     display: inline-block;
@@ -559,4 +587,52 @@ footer {
     overflow-wrap: anywhere;
     text-align: center;
     max-width: 100%;
+}
+
+
+.more-section {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(30,30,40,0.85);
+    border-radius: 8px;
+}
+
+.more-container {
+    display: flex;
+    gap: 30px;           /* space between links and player */
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;      /* stack on mobile */
+}
+
+.more-links {
+    flex: 1 1 300px;     /* links take at least 300px */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.more-links .external-link {
+    display: inline-block;
+    font-size: 1rem;
+    color: #f9f4e3ff;
+    text-decoration: none;
+}
+
+.more-links .external-link:hover {
+    text-decoration: underline;
+}
+
+.spotify-player {
+    flex: 1 1 400px;      /* player takes at least 400px */
+    max-width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+
+.spaced {
+    margin-bottom: 100px;
 }

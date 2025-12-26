@@ -97,7 +97,7 @@ referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <section class="events-section">
   
   <h1>Upcoming Events</h1>
-   <p>Stay Tuned! </p>
+  <p class="spaced">Stay Tuned!</p>
   <h1>Past Events</h1>
 
   <div class="events-grid">
@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 observer.unobserve(entry.target); // animate only once
             }
         });
-    }, { threshold: 0.051 }); // trigger when 10% visible
+    }, { threshold: 0.005 }); 
 
     sections.forEach(section => observer.observe(section));
 });
