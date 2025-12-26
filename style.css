@@ -412,7 +412,7 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 55%;;  /*   better crop for desktop */
+    object-position: center 39%;;  /*   better crop for desktop */
     display: block;
 }
 
@@ -428,8 +428,10 @@ footer {
 .header-overlay h1 {
     color: #ffdd57;
     font-size: clamp(2rem, 5vw, 3.5rem);
-    text-shadow: 0 0 15px rgba(0,0,0,0.8);
+    text-shadow: 0 0 15px rgba(0,0,0,0.6);
     margin: 0;
+    transform: translateY(-15%); /* Moves the title 10% upwards */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* shadow effect */
 }
 
 .external-link {
@@ -512,6 +514,7 @@ footer {
     overflow: hidden;
     border-radius: 16px;
     background:  rgba(30,30,40,0.85);
+     margin-bottom: 10px;
 }
 
 /* Track: flex container */
@@ -567,18 +570,16 @@ footer {
 
 /* CTA link */
 .cta-link {
-    display: inline-block;
-    margin-top: 20px;
-    color: #ffdd57;
-    font-weight: bold;
-    text-decoration: none;
+    margin-top: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center;     /* Vertically center the image */
 }
 
-
 .cta-link img {
-    max-width: 100%;     /* image will not exceed container width */
-    height: auto;        /* keep aspect ratio */
-    display: block;      /* remove small bottom spacing */
+    max-width:25%;          /* image will not exceed container width */
+    height: auto;            /* keep aspect ratio */
+    display: block;          /* remove small bottom spacing */
 }
 
 

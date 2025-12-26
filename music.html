@@ -24,6 +24,7 @@
   <header class="page-header">
   <img src="img/music.JPEG" alt="The Strangers live">
   <div class="header-overlay">
+     <h1> Music </h1>
   </div>
 </header>
 
@@ -265,7 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 observer.unobserve(entry.target); // animate only once
             }
         });
-    }, { threshold: 0.005 }); 
+    }, { threshold: 0.01 }); 
 
     sections.forEach(section => observer.observe(section));
 });
