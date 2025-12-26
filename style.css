@@ -492,7 +492,7 @@ footer {
 
 .image-slider {
     position: relative;
-    width: 80%;
+    width: 90%;
     max-width: 900px;
     aspect-ratio: 4 / 3;        /* keeps 4:3 ratio */
     margin: 30px auto;

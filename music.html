@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 observer.unobserve(entry.target); // animate only once
             }
         });
-    }, { threshold: 0.05 }); // trigger when 10% visible
+    }, { threshold: 0.03 }); // trigger when 10% visible
 
     sections.forEach(section => observer.observe(section));
 });
