@@ -198,19 +198,24 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: linear-gradient(90deg, #ffdd57, #fae48eff);/* #ffdd57;*/
+
+    color: #ffdd57;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(0,0,0,0.7);
+
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
     text-align: center;
-    font-size: 4vw; /* font scales with viewport width */
+    font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+    line-height: 1.4;
 }
 
 .overlay-text.visible {
     opacity: 1;
 }
+
+
 /* Hover effect for desktop */
 .image-container:hover .overlay-text {
     opacity: 1;
@@ -221,26 +226,6 @@ footer {
     transform: scale(1.02);
 }
 
-/* Overlay text container */
-.overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffdd57;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(0,0,0,0.7);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    text-align: center;
-    font-size: 1.5em;
-}
-
-/* Show overlay on hover */
-.image-container:hover .overlay-text {
-    opacity: 1;
-}
 
 /* 2x2 grid */
 .grid-2x2 {
@@ -492,7 +477,7 @@ footer {
 
 .image-slider {
     position: relative;
-    width: 90%;
+    width: 97%;
     max-width: 900px;
     aspect-ratio: 4 / 3;        /* keeps 4:3 ratio */
     margin: 30px auto;
@@ -566,4 +551,12 @@ footer {
     max-width: 100%;     /* image will not exceed container width */
     height: auto;        /* keep aspect ratio */
     display: block;      /* remove small bottom spacing */
+}
+
+
+#contact h2 {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    text-align: center;
+    max-width: 100%;
 }
