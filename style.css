@@ -392,7 +392,7 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 39%;;  /*   better crop for desktop */
+    object-position: center 46%;  /*   better crop for desktop */
     display: block;
 }
 
@@ -558,7 +558,7 @@ footer {
 }
 
 .cta-link img {
-    max-width:30%;          /* image will not exceed container width */
+    max-width:35%;          /* image will not exceed container width */
     height: auto;            /* keep aspect ratio */
     display: block;          /* remove small bottom spacing */
 }
