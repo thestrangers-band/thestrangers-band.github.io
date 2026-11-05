@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Geom&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music - The Strangers</title>
-    <link rel="icon" href="img/minilogo_2.jpg" type="image/png">
+  <!-- Anteprima link (WhatsApp, Instagram, Facebook...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Strangers">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Musica ed eventi – The Strangers">
+  <meta property="og:description" content="The Strangers: 17 musicisti e una sezione fiati che fa ballare tutte le età. Rock &#39;n&#39; roll, pop, funk e disco dal vivo per feste, sagre ed eventi in tutto il Nord Italia.">
+  <meta property="og:url" content="https://thestrangers-band.github.io/music.html">
+  <meta property="og:image" content="https://thestrangers-band.github.io/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Strangers live sul palco">
+  <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="img/minilogo_2.jpg" type="image/jpeg">
  <link rel="stylesheet" href="style.css">
 </head>
 
@@ -79,34 +91,9 @@
 </section>
 
 
-  <!--
-   <section>
-
-      <img src="img/eventi.JPG" alt="sound" class="section-img">
-      <section class="events-section">
-  <h1>Past Events</h1>
-
-  <div class="events-grid">
-    <img src="img/Locandina7.JPEG" alt="Event 1 poster">
-    <img src="img/Locandina8.JPEG" alt="Event 2 poster">
-    <img src="img/Locandina10.JPEG" alt="Event 3 poster">
-    <img src="img/Locandina2.jpg" alt="Event 4 poster">
-    <img src="img/Locandina3.jpg" alt="Event 2 poster">
-    <img src="img/Locandina1.jpg" alt="Event 3 poster">
-    <img src="img/Locandina12.JPEG" alt="Event 4 poster">
-    <img src="img/locandina4.jpg" alt="Event 4 poster">
-    <img src="img/locandina14.png" alt="Event 4 poster">
-    <img src="img/Locandina6.jpg" alt="Event 4 poster">
-     <img src="img/Locandina5.JPG" alt="Private Event">
-    <img src="img/Locandina11.jpg" alt="Event 4 poster">
-    <img src="img/locandina9.jpg" alt="Event 4 poster">
-  </div>
-</section>
-
--->
 
 <section>
-  <img src="img/eventi.JPG" alt="sound" class="section-img">
+  <img src="img/eventi.JPG" alt="The Strangers live" class="section-img">
 <section class="events-section">
   
   <h1>Upcoming Events</h1>
@@ -114,6 +101,7 @@
 
   
   <p class="spaced">Stay Tuned!</p>
+  <p>Vuoi che gli Strangers suonino al tuo evento? <a href="contact.html">Contattaci!</a></p>
 
 
 
@@ -181,7 +169,7 @@
       <img src="img/loc/Locandina3.jpg" alt="Live in Cremona 1">
       <p class="event-caption">
         <strong>Happening Cremona (CR)</strong><br>
-       18/06/24
+       18/06/2024
 
       </p>
     </div>
@@ -212,7 +200,7 @@
         <div class="event-card">
       <img src="img/loc/locandina14.png" alt="Live in Rimini">
       <p class="event-caption">
-        <strong>Meeting di Rimini (RM)</strong><br>
+        <strong>Meeting di Rimini (RN)</strong><br>
        20/08/2023
       </p>
     </div>
@@ -228,7 +216,7 @@
             <div class="event-card">
       <img src="img/loc/Locandina5.JPG" alt="Live in Caldonazzo 2">
       <p class="event-caption">
-        <strong> Happening Trentino - Cadonazzo (TN)</strong><br>
+        <strong> Happening Trentino - Caldonazzo (TN)</strong><br>
        30/09/2022
       </p>
 
@@ -303,22 +291,7 @@
 
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // animate only once
-            }
-        });
-    }, { threshold: 0.01 }); 
-
-    sections.forEach(section => observer.observe(section));
-});
-</script>
+<script src="scripts.js"></script>
 
 </body>
 </html>

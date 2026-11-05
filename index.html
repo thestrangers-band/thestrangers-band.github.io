@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Geom&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Strangers </title>
-  <meta name="description" content="The Strangers: band live per eventi, concerti e feste a Trento, Verona, Padova, Rimini e in tutta Italia. 17 musicisti, uno show unico.yp">
+  <title>The Strangers</title>
+  <!-- Anteprima link (WhatsApp, Instagram, Facebook...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Strangers">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="The Strangers – Band live">
+  <meta property="og:description" content="The Strangers: 17 musicisti e una sezione fiati che fa ballare tutte le età. Rock &#39;n&#39; roll, pop, funk e disco dal vivo per feste, sagre ed eventi in tutto il Nord Italia.">
+  <meta property="og:url" content="https://thestrangers-band.github.io/">
+  <meta property="og:image" content="https://thestrangers-band.github.io/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Strangers live sul palco">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="The Strangers: band live per eventi, concerti e feste a Trento, Verona, Padova, Rimini e in tutta Italia. 17 musicisti, uno show unico.">
   <meta name="robots" content="index, follow">
-  <link rel="icon" href="img/minilogo_2.jpg" type="image/png">
+  <link rel="icon" href="img/minilogo_2.jpg" type="image/jpeg">
 <link rel="stylesheet" href="style.css">
 
 </head>
@@ -76,7 +88,7 @@
     <button class="img-btn next">&#10095;</button>
 </div>
   
-  <a href="music.html" class="cta-link"><img src="img/listennow2.png" ></a>
+  <a href="music.html" class="cta-link"><img src="img/listennow2.png" alt="Ascolta la nostra musica"></a>
 
 </section>
 
@@ -97,22 +109,7 @@
   </div>
 </footer>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // animate only once
-            }
-        });
-    }, { threshold: 0.05 }); // trigger when 10% visible
-
-    sections.forEach(section => observer.observe(section));
-});
-</script>
+<script src="scripts.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const track = document.querySelector(".img-track");
